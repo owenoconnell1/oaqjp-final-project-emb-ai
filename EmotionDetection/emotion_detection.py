@@ -12,6 +12,8 @@ def emotion_detector(text_to_analyze):
     fear_score = emotions["fear"]
     joy_score = emotions["joy"]
     sadness_score = emotions["sadness"]
+    if response.status_code !=200:
+        return None
     score_list = {
         'anger': anger_score,
         'disgust': disgust_score,
